@@ -1,0 +1,34 @@
+@prefix ohcVocab: <https://raw.githubusercontent.com/han-tu/ohc-vocab-turtle/main/ohcv.ttl#> .
+@prefix riskFactor: <https://raw.githubusercontent.com/han-tu/ohc-vocab-turtle/main/ohcv.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+ohcVocab:disease a rdfs:Class;
+  rdfs:subClassOf dbo:disease .
+
+ohcVocab:procedure a rdf:property;
+  rdfs:range dbr:Medical_procedure .
+
+ohcVocab:anatomy a rdf:property;
+  rdfs:range dbo:AnatomicalStructure .
+
+ohcVocab:disorder a rdf:property;
+  rdfs:range dbo:symptom, dbo:disease.
+
+ohcVocab:chemical a rdf:property;
+  rdfs:range dbo:ChemicalSubstance .
+
+ohcVocab:risk a rdfs:Class;
+  rdfs:subClassOf schema:MedicalRiskFactor .
+
+# ---------------------------------------------------
+# Risk factors
+riskFactor:low a ohcVocab:risk;
+  schema:name "Low risk" .
+
+riskFactor:high a ohcVocab:risk;
+  schema:name "High risk" .
