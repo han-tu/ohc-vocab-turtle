@@ -11,15 +11,27 @@ ohcVocab:disease a rdfs:Class;
   rdfs:subClassOf dbo:disease .
 
 ohcVocab:procedure a rdf:property;
+  rdfs:comment "Serangkaian aksi yang spesifik, tindakan atau operasi yang harus dijalankan atau dieksekusi dengan cara yang sama agar selalu memperoleh hasil yang sama dari keadaan yang sama." ;
+  rdfs:isDefinedBy <http://id.dbpedia.org/page/Prosedur> ;
+  rdfs:label "Prosedur" ;
   rdfs:range dbr:Medical_procedure .
 
 ohcVocab:anatomy a rdf:property;
+  rdfs:comment "Yang berhubungan dengan struktur dan organisasi dari makhluk hidup (dalam hal ini manusia)" ;
+  rdfs:isDefinedBy <http://id.dbpedia.org/page/Anatomi> ;
+  rdfs:label "Anatomi" ;
   rdfs:range dbo:AnatomicalStructure .
 
 ohcVocab:disorder a rdf:property;
+  rdfs:comment "Kelainan yang terjadi pada manusia" ;
+  rdfs:isDefinedBy <http://id.dbpedia.org/page/Kelainan> ;
+  rdfs:label "Disorder" ;
   rdfs:range dbo:symptom, dbo:disease.
 
 ohcVocab:chemical a rdf:property;
+  rdfs:comment "Semua materi dengan komposisi kimia tertentu" ;
+  rdfs:isDefinedBy <http://id.dbpedia.org/page/Zat_kimia> ;
+  rdfs:label "Chemical" ;
   rdfs:range dbo:ChemicalSubstance .
 
 ohcVocab:risk a rdfs:Class;
